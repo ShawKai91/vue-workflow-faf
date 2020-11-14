@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HomepageContent />
+    <HomepageContent :subtitle="subtitleContent" :marketingMessage="marketingMessage" />
 
     <div>
       <form>
@@ -19,7 +19,9 @@ export default {
   data() {
     return {
       email: '',
-      password: ''
+       password: '',
+      subtitleContent: "Manage your development projects.",
+      marketingMessage: "Sign up today to get started for free."
     }
   },
   components: {
