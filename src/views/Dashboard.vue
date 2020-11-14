@@ -1,6 +1,13 @@
 <template>
   <div>
     <HomepageContent />
+
+    <div>
+      <form>
+        <input type="text" v-model="email">
+        <input type="password" v-model="password">
+      </form>
+    </div>
   </div>
 </template>
 
@@ -11,6 +18,8 @@ export default {
   name: 'Dashboard',
   data() {
     return {
+      email: '',
+      password: ''
     }
   },
   components: {
