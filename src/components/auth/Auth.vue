@@ -1,5 +1,5 @@
 <template>
-  <div class="Login">
+  <div class="Auth">
     <form>
       <input type="text" v-model="email">
       <input type="password" v-model="password">
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'Login',
+  name: 'Auth',
   data() {
     return {
       email: '',

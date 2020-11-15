@@ -1,13 +1,14 @@
 <template>
   <div class="Home">
     <HomepageContent :subtitle="subtitleContent" :marketingMessage="marketingMessage" />
-    <Login @update="handleLoginUpdate" />
+    <Auth @update="handleLoginUpdate" />
+    <Auth @update="handleLoginUpdate" />
   </div>
 </template>
 
 <script>
 import HomepageContent from '@/components/content/HomepageContent';
-import Login from '@/components/auth/Login';
+import Auth from '@/components/auth/Auth';
 export default {
   name: 'home',
   data() {
@@ -20,7 +21,7 @@ export default {
   },
   components: {
     HomepageContent,
-    Login
+    Auth
   },
   methods: {
     handleLoginUpdate(data) {
