@@ -1,8 +1,8 @@
 <template>
   <div class="Home">
     <HomepageContent :subtitle="subtitleContent" :marketingMessage="marketingMessage" />
-    <Auth @update="handleLoginUpdate" />
-    <Auth @update="handleLoginUpdate" />
+    <Auth formType="login" @update="handleLoginUpdate" />
+    <Auth formType="sign-up" @update="handleLoginUpdate" />
   </div>
 </template>
 
