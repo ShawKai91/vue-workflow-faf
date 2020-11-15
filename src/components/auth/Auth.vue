@@ -1,7 +1,7 @@
 <template>
   <div class="Auth">
     <form>
-      {{ formType }}
+      {{ formattedTitle }}
 
       <div v-if="formType === 'sign-up'" class="form__Name">
         <label>Name</label>
@@ -20,7 +20,7 @@
 
     </form>
 
-    <button @click.prevent="updateLoginDetails">Login</button>
+    <button @click.prevent="updateLoginDetails">{{ formattedTitle }}</button>
   </div>
 </template>
 
@@ -36,6 +36,12 @@ export default {
   },
   props: {
     formType: String
+  },
+
+  computed: {
+    formattedTitle: function() {
+      return this.formType[0].toUpperCase() + this.formType.slice(1);
+    }
   },
 
   // beforeUpdate() {console.log("beforeUpdate from Login");},
