@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="Login">
     <form>
       <input type="text" v-model="email">
       <input type="password" v-model="password">
@@ -19,8 +19,8 @@ export default {
     }
   },
 
-  beforeUpdate() {console.log("beforeUpdate from Login");},
-  updated() {console.log("updated from Login");},
+  // beforeUpdate() {console.log("beforeUpdate from Login");},
+  // updated() {console.log("updated from Login");},
 
   methods: {
     updateLoginDetails() {

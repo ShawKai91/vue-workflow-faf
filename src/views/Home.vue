@@ -1,14 +1,31 @@
 <template>
-  <div class="home">
-homepage
+  <div class="Home">
+    <HomepageContent :subtitle="subtitleContent" :marketingMessage="marketingMessage" />
+    <Login @update="handleLoginUpdate" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-
-
+import HomepageContent from '@/components/content/HomepageContent';
+import Login from '@/components/auth/Login';
 export default {
-  name: 'Home',
+  name: 'home',
+  data() {
+    return {
+      email: '',
+      password: '',
+      subtitleContent: "Manage your development projects.",
+      marketingMessage: "Sign up today to get started for free.",
+    }
+  },
+  components: {
+    HomepageContent,
+    Login
+  },
+  methods: {
+    handleLoginUpdate(data) {
+      console.log("updated", data)
+    }
+  }
 }
 </script>
